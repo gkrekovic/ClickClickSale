@@ -11,7 +11,7 @@ function [retval] = makewindow (conn, len, typ)
     retval = [linspace(0, 1, 16) linspace(1, 0.2, len/2-16) linspace(0.2, 0, len/2)]';
    end
   else
-     if strcmp(strtrim(conn), "Unknown")
+     if strcmp(strtrim(conn), 'Unknown')
         retval = [linspace(0, 1, 16) linspace(1, 0.2, len/4) linspace(0.2, 0, 3*len/4-16)]';
      else
         retval = hanning(len);
