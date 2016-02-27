@@ -2,9 +2,9 @@
 ## Created: 2015-08-07
 
 function [retval] = makesignal (network, aff, adv, operator, model, len, fs, typ)
-  fc = 120 * log(mod(sum(toascii(operator)), 80)+1)*2^(1/7); %% bilo je 140
+  fc = 120 * log(mod(sum(toascii(operator)), 80)+1)*2^(1/7);
   fm = aff/adv*fc;
-  B = sum(toascii(model)) / 1500; %% bilo je 1000
+  B = sum(toascii(model)) / 1500;
   if typ == 0
     retval = sin(2*pi*fc*(1:len)/fs + B*sin(2*pi*fm*(1:len)/fs))';
   else
