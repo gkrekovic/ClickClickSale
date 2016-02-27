@@ -3,9 +3,9 @@
 
 function [retval] = makewindow (conn, len, typ)
   if (typ == 0)
-    if strcmp(strtrim(conn), "Unknown")
+    if strcmp(strtrim(conn), 'Unknown')
      retval = hanning(len);
-   elseif strcmp(strtrim(conn), "Mobile")
+   elseif strcmp(strtrim(conn), 'Mobile')
      retval = bartlett(len);
    else
     retval = [linspace(0, 1, 16) linspace(1, 0.2, len/2-16) linspace(0.2, 0, len/2)]';
