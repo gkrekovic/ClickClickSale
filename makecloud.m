@@ -12,7 +12,7 @@ function [retval] = makecloud (filename, duration, fs, ch, dataduration, typ)
   fid = fopen (filename);
   inputline = fgetl(fid);
   
-  inittime = parsetime("2015-08-03 10:00:00.000");
+  inittime = parsetime('2015-08-03 10:00:00.000');
   
   while 1
      %% Load a row from the file
@@ -20,7 +20,7 @@ function [retval] = makecloud (filename, duration, fs, ch, dataduration, typ)
 	if ~ischar(inputline), break, end
 
 	% Parse a data row
-	parsedline = strsplit(inputline, ";");
+	parsedline = strsplit(inputline, ';');
 	tstamp = parsedline{1};
 	network = str2double(parsedline{2});
 	aff = str2double(parsedline{3});
