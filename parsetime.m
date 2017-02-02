@@ -1,8 +1,7 @@
-## Author: Gordan Kreković
-## Created: 2015-08-07
+% Author: Gordan Krekovi?
+% Created: 2015-08-07
 
 function [retval] = parsetime (tstemp)
-  s = strsplit(tstemp, '.');
-  tm_struct = strptime(s{1}, '%Y-%m-%d %T');
-  retval = mktime(tm_struct);
+  t = datetime(tstemp, 'Format', 'yyyy-MM-dd HH:mm:SS.000');
+  retval = posixtime(t);
 end

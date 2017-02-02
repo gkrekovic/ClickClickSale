@@ -1,5 +1,5 @@
-## Author: Gordan Kreković
-## Created: 2015-08-08
+% Author: Gordan Krekovi?
+% Created: 2015-08-08
 
 function [retval] = determineamplitude(network)
   if (network == 2)

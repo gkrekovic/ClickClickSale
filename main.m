@@ -1,5 +1,5 @@
-## Author: Gordan Kreković
-## Created: 2015-08-07
+% Author: Gordan Krekovic
+% Created: 2015-08-07
 
 clear
 
@@ -24,5 +24,5 @@ maxsample = max(max(piece(:, :)));
 
 % Export each channel to a separate wave file
 for i = 1:ch
-  wavwrite(piece(:, i) / maxsample, fs, 16, ['clks' int2str(i) '.wav']);
+  audiowrite(char(['clks' int2str(i) '.wav']), piece(:, i) / maxsample, fs);
 end

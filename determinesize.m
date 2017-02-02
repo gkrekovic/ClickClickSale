@@ -1,5 +1,5 @@
-## Author: Gordan Kreković
-## Created: 2015-08-07
+% Author: Gordan Krekovi?
+% Created: 2015-08-07
 
 function [retval] = determinesize (network, fs, typ)
   if (typ == 0)
